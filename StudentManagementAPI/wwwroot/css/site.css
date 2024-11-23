@@ -1,0 +1,220 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/* General Container Styling */
+#dashboard-container {
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+    /* Dashboard Header */
+    #dashboard-container h3 {
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        color: #343a40; /* Dark gray color */
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #007bff; /* Blue underline */
+        padding-bottom: 10px;
+    }
+
+/* Table Styling */
+.table {
+    background-color: white; /* White table background */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Remove overflow on borders */
+}
+
+    .table th {
+        background-color: #007bff; /* Blue header */
+        color: white; /* White text */
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border: none; /* Remove borders */
+    }
+
+    .table td {
+        text-align: center;
+        vertical-align: middle;
+        font-size: 1rem;
+        color: #495057; /* Neutral gray text */
+    }
+
+/* Hover Effects for Rows */
+.table-hover tbody tr:hover {
+    background-color: #e9ecef; /* Light gray hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #dashboard-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .table td,
+    .table th {
+        font-size: 0.9rem;
+    }
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Apply styling to the entire page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the main container that holds the content */
+.main-content {
+    min-height: calc(100vh - 60px); /* Make sure content does not overlap with footer */
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+
+/* General body and text styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Main content container */
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+/* Large Section: About UPTM */
+.about-uptm-section {
+    background-color: #d1eff2; /* Darker shade of blue-green */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid #006064; /* Darker teal border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+    .about-uptm-section h2 {
+        font-size: 2.2em; /* Increased font size */
+        color: #003366; /* Dark blue color */
+        margin-bottom: 10px;
+    }
+
+    .about-uptm-section p {
+        line-height: 1.6;
+        margin-bottom: 10px;
+        text-align: justify; /* Justify text */
+        color: #2c2c2c; /* Darker text color */
+    }
+
+/* Small sections */
+.small-section {
+    background-color: #e6e6e6; /* Darker light gray background */
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #444; /* Darker border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* More pronounced shadow */
+    text-align: center;
+}
+
+    .small-section h3 {
+        font-size: 1.8em; /* Increased font size */
+        color: #003366; /* Dark blue color */
+        margin-bottom: 10px;
+    }
+
+    .small-section p {
+        color: #2c2c2c; /* Darker text color */
+        text-align: justify; /* Justify text for paragraphs */
+    }
+
+    .small-section ul {
+        list-style-type: none;
+        padding-left: 20px;
+    }
+
+        .small-section ul li {
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            text-align: justify; /* Justify text for list items */
+            color: #2c2c2c; /* Darker text color for list items */
+        }
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative; /* Keeps the footer at the bottom without overlapping the content */
+    width: 100%;
+}
+
+/* Media query for larger screens (responsive design) */
+@media (min-width: 768px) {
+    /* Grid layout for all sections */
+    .grid-container {
+        grid-template-columns: 1fr; /* One column layout for all sections */
+        grid-gap: 20px;
+    }
+
+    .about-uptm-section {
+        grid-column: span 1; /* "About UPTM" takes one column, centered */
+    }
+
+    /* Align small sections vertically under the "About UPTM" */
+    .small-section {
+        margin: 20px auto; /* Center small sections */
+        max-width: 800px; /* Limit width for small sections */
+    }
+
+    .grid-container .small-section {
+        justify-self: center; /* Center small sections */
+    }
+}
+
+
+

@@ -1,0 +1,34 @@
+﻿@model StudentManagementAPI.Models.Student
+
+<h2>Create New Student</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="StudentNo" class="control-label"></label>
+        <input asp-for="StudentNo" class="form-control" />
+        <span asp-validation-for="StudentNo" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="StudentName" class="control-label"></label>
+        <input asp-for="StudentName" class="form-control" />
+        <span asp-validation-for="StudentName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="StudentEmail" class="control-label"></label>
+        <input asp-for="StudentEmail" class="form-control" />
+        <span asp-validation-for="StudentEmail" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="StudentContactNumber" class="control-label"></label>
+        <input asp-for="StudentContactNumber" class="form-control" />
+        <span asp-validation-for="StudentContactNumber" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="StudentEnrollmentDate" class="control-label"></label>
+        <input asp-for="StudentEnrollmentDate" class="form-control" type="date" />
+        <span asp-validation-for="StudentEnrollmentDate" class="text-danger"></span>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

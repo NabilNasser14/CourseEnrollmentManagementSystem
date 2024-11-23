@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2></h2>
+<div id="dashboard-container" class="container mt-4">
+    <h3>Course Overview</h3>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Course Code</th>
+                <th>Course Name</th>
+            </tr>
+        </thead>
+        <tbody id="course-list">
+           
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Function to fetch and render courses
+    function fetchCourses() {
+        $.ajax({
+            url: "/Courses/GetCourses",
+            method: "GET",
+            success: function (data) {
+                const courseList = $("#course-list");
+                courseList.empty(); 
+
+                data.forEach((course, index) => {
+                    courseList.append(`
+                            <tr>
+                                <td>${index + 1}</td>
+                                <td>${course.courseCode}</td>
+                                <td>${course.courseName}</td>
+                            </tr>
+                        `);
+                });
+            },
+            error: function () {
+                alert("Failed to fetch course data.");
+            }
+        });
+    }
+
+    // Initial fetch
+    $(document).ready(function () {
+        fetchCourses();
+        
+        setInterval(fetchCourses, 10000);
+    });
+</script>

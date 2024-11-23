@@ -139,7 +139,7 @@ namespace StudentManagementAPI.Controllers
             var courses = await _context.Courses.ToListAsync();
             return Json(courses);
         }
-
+     
 
 
     }
